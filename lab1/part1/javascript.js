@@ -51,7 +51,7 @@ function onLocationError(e) {
 
 map.on('locationerror', onLocationError);
 
-L.easyButton('<img src="crosshairs-solid.svg">', function(btn, map){
+L.easyButton('<i class = "icon"><img src="crosshairs-solid.svg"></i>', function(btn, map){
     map.locate({setView: true, maxZoom: 16});
 }).addTo(map);
 

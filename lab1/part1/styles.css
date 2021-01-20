@@ -7,3 +7,14 @@ html, body, #map {
 height: 100%;
 width: 100vw;
 }
+
+.icon {
+   display: block;
+   height: 18px;
+   left: 0px;
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   top: 5px;
+   width: 18px;
+}
