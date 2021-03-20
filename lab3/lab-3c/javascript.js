@@ -51,7 +51,7 @@ new L.Control.Draw({
 }).addTo(map);
 
 
-alert("This map is for recording people's favorite places in Tacoma.\nTo submit a place, use the tools on the left side of the map to add a point or draw a polygon on the map.\nWhen you have placed a point or finished drawing a polygon, enter a title and description for the place in the pop-up that appears and click \"Submit.\"");
+alert("This map is for submitting info on local restaurants in Tacoma.\nTo submit a place, use the tools on the left side of the map to add a point on the map.\nWhen you have placed a point, enter the relevant info in the pop-up that appears and click \"Submit.\"");
 
 
 function createFormPopup() {
