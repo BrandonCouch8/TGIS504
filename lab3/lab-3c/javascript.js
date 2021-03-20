@@ -96,24 +96,28 @@ function createFormPopup() {
                 '<ul>' +
                   '<li>' +
                     '<label for="dinein">' +
+                      '<input type="hidden" name="dinein" value="false">' +
                       '<input type="checkbox" id="dinein" name="dinein" value="true">' +
                       'Dine-in' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="drivethru">' +
+                      '<input type="hidden" name="drivethru" value="false">' +
                       '<input type="checkbox" id="drivethru" name="drivethru" value="true">' +
                       'Drive-Through' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="pickup">' +
+                      '<input type="hidden" name="pickup" value="false">' +
                       '<input type="checkbox" id="pickup" name="pickup" value="true">' +
                       'Pick-up' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="delivery">' +
+                      '<input type="hidden" name="delivery" value="false">' +
                       '<input type="checkbox" id="delivery" name="delivery" value="true">' +
                       'Delivery' +
                     '</label>' +
