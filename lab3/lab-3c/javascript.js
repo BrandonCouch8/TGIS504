@@ -142,18 +142,21 @@ function createFormPopup() {
               '<p> <input type="button" value="Submit" id="submit"> </p>' +
           '</section>' +
       '</form>' +
-      '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>' +
-      '<script>' +
-          '$(document).ready(function () {' +
-              '$(\'[key]\').change(function () {' +
-                  'var key = $(this).attr(\'key\');' +
-                  '$($(\'[name="checked[\' + key + \']"]\')).val($(this).is(\':checked\') ? \'true\' : \'false\');' +
-              '});' +
-          '});' +
-      '</script>'
 
     drawnItems.bindPopup(popupContent).openPopup();
 }
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[key]').change(function () {
+            var key = $(this).attr('key');
+            $($('[name="checked[' + key + ']"]')).val($(this).is(':checked') ? 'true' : 'false');
+        });
+    });
+</script>
+
+
 
 map.addEventListener("draw:created", function(e) {
     e.layer.addTo(drawnItems);
