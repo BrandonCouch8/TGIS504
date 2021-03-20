@@ -38,7 +38,7 @@ fetch(urlGeoJSON + sqlQuery)
 
 new L.Control.Draw({
     draw : {
-        polygon : true,
+        polygon : false,
         polyline : false,
         rectangle : false,     // Rectangles disabled
         circle : false,        // Circles disabled
@@ -96,25 +96,25 @@ function createFormPopup() {
                 '<ul>' +
                   '<li>' +
                     '<label for="dinein">' +
-                      '<input type="checkbox" id="dinein" name="dinein" value="dinein">' +
+                      '<input type="checkbox" id="dinein" name="dinein" value="true">' +
                       'Dine-in' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="drivethru">' +
-                      '<input type="checkbox" id="drivethru" name="drivethru" value="drivethru">' +
+                      '<input type="checkbox" id="drivethru" name="drivethru" value="true">' +
                       'Drive-Through' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="pickup">' +
-                      '<input type="checkbox" id="pickup" name="pickup" value="pickup">' +
+                      '<input type="checkbox" id="pickup" name="pickup" value="true">' +
                       'Pick-up' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
                     '<label for="delivery">' +
-                      '<input type="checkbox" id="delivery" name="delivery" value="delivery">' +
+                      '<input type="checkbox" id="delivery" name="delivery" value="true">' +
                       'Delivery' +
                     '</label>' +
                   '</li>' +
