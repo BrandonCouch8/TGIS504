@@ -95,30 +95,30 @@ function createFormPopup() {
                 '<legend>Dining options: </legend>' +
                 '<ul>' +
                   '<li>' +
+                    '<input type="hidden" name="dinein" value="false">' +
                     '<label for="dinein">' +
-                      '<input id="dinein" type="checkbox" key="1"/>' +
-                      '<input type="hidden" name="checked[1]" value="false">' +
+                      '<input type="checkbox" id="dinein" name="dinein" value="true">' +
                       'Dine-in' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
+                    '<input type="hidden" name="drivethru" value="false">' +
                     '<label for="drivethru">' +
-                      '<input id="drivethru" type="checkbox" key="2"/>' +
-                      '<input type="hidden" name="checked[2]" value="false">' +
+                      '<input type="checkbox" id="drivethru" name="drivethru" value="true">' +
                       'Drive-Through' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
+                    '<input type="hidden" name="pickup" value="false">' +
                     '<label for="pickup">' +
-                      '<input id="pickup" type="checkbox" key="3"/>' +
-                      '<input type="hidden" name="checked[3]" value="false">' +
+                      '<input type="checkbox" id="pickup" name="pickup" value="true">' +
                       'Pick-up' +
                     '</label>' +
                   '</li>' +
                   '<li>' +
+                    '<input type="hidden" name="delivery" value="false">' +
                     '<label for="delivery">' +
-                      '<input id="delivery" type="checkbox" key="4"/>' +
-                      '<input type="hidden" name="checked[4]" value="false">' +
+                      '<input type="checkbox" id="delivery" name="delivery" value="true">' +
                       'Delivery' +
                     '</label>' +
                   '</li>' +
@@ -141,22 +141,10 @@ function createFormPopup() {
           '<section>' +
               '<p> <input type="button" value="Submit" id="submit"> </p>' +
           '</section>' +
-      '</form>' +
+      '</form>'
 
     drawnItems.bindPopup(popupContent).openPopup();
 }
-
-
-
-$(document).ready(function () {
-    $('[key]').change(function () {
-        var key = $(this).attr('key');
-        $($('[name="checked[' + key + ']"]')).val($(this).is(':checked') ? 'true' : 'false');
-    });
-});
-
-
-
 
 map.addEventListener("draw:created", function(e) {
     e.layer.addTo(drawnItems);
@@ -171,10 +159,10 @@ function setData(e) {
         var enteredName = document.getElementById("name").value;
         var enteredType = document.getElementById("type").value;
         var enteredDescription = document.getElementById("desc").value;
-        var isDineIn = document.getElementById("checked[1]").value;
-        var isDriveThru = document.getElementById("checked[2]").value;
-        var isPickUp = document.getElementById("checked[3]").value;
-        var isDelivered = document.getElementById("checked[4]").value;
+        var isDineIn = document.getElementById("dinein").value;
+        var isDriveThru = document.getElementById("drivethru").value;
+        var isPickUp = document.getElementById("pickup").value;
+        var isDelivered = document.getElementById("delivery").value;
         var enteredPhone = document.getElementById("phone").value;
         var enteredWebsite = document.getElementById("website").value;
 
