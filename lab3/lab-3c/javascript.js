@@ -56,7 +56,7 @@ alert("This map is for submitting info on local restaurants in Tacoma.\nTo submi
 
 function createFormPopup() {
     var popupContent =
-      '<form method="post">' +
+      '<form>' +
           '<h1>Enter Restaurant Info! </h1>' +
           '<p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>' +
             '<section>' +
