@@ -91,31 +91,39 @@ function createFormPopup() {
                 '<br><input type="text" id="desc" name="description">' +
               '</p>' +
             '</section>' +
-
-                    '<input type="hidden" name="dinein" value="false">' +
+              '<fieldset>' +
+                '<legend>Dining options: </legend>' +
+                '<ul>' +
+                  '<li>' +
                     '<label for="dinein">' +
-                      '<input type="checkbox" id="dinein" name="dinein" value="true">' +
+                      '<input id="dinein" type="checkbox" key="1"/>' +
+                      '<input type="hidden" name="checked[1]" value="false">' +
                       'Dine-in' +
                     '</label>' +
-
-                    '<input type="hidden" name="drivethru" value="false">' +
+                  '</li>' +
+                  '<li>' +
                     '<label for="drivethru">' +
-                      '<input type="checkbox" id="drivethru" name="drivethru" value="true">' +
+                      '<input id="drivethru" type="checkbox" key="2"/>' +
+                      '<input type="hidden" name="checked[2]" value="false">' +
                       'Drive-Through' +
                     '</label>' +
-
-                    '<input type="hidden" name="pickup" value="false">' +
+                  '</li>' +
+                  '<li>' +
                     '<label for="pickup">' +
-                      '<input type="checkbox" id="pickup" name="pickup" value="true">' +
+                      '<input id="pickup" type="checkbox" key="3"/>' +
+                      '<input type="hidden" name="checked[3]" value="false">' +
                       'Pick-up' +
                     '</label>' +
-
-                    '<input type="hidden" name="delivery" value="false">' +
+                  '</li>' +
+                  '<li>' +
                     '<label for="delivery">' +
-                      '<input type="checkbox" id="delivery" name="delivery" value="true">' +
+                      '<input id="delivery" type="checkbox" key="4"/>' +
+                      '<input type="hidden" name="checked[4]" value="false">' +
                       'Delivery' +
                     '</label>' +
-
+                  '</li>' +
+                '</ul>' +
+              '</fieldset>' +
             '<section>' +
               '<p>' +
                 '<label for="phone">' +
@@ -133,7 +141,16 @@ function createFormPopup() {
           '<section>' +
               '<p> <input type="button" value="Submit" id="submit"> </p>' +
           '</section>' +
-      '</form>'
+      '</form>' +
+      '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>' +
+      '<script>' +
+          '$(document).ready(function () {' +
+              '$(\'[key]\').change(function () {' +
+                  'var key = $(this).attr(\'key\');' +
+                  '$($(\'[name="checked[\' + key + \']"]\')).val($(this).is(\':checked\') ? \'true\' : \'false\');' +
+              '});' +
+          '});' +
+      '</script>'
 
     drawnItems.bindPopup(popupContent).openPopup();
 }
@@ -151,10 +168,10 @@ function setData(e) {
         var enteredName = document.getElementById("name").value;
         var enteredType = document.getElementById("type").value;
         var enteredDescription = document.getElementById("desc").value;
-        var isDineIn = document.getElementById("dinein").value;
-        var isDriveThru = document.getElementById("drivethru").value;
-        var isPickUp = document.getElementById("pickup").value;
-        var isDelivered = document.getElementById("delivery").value;
+        var isDineIn = document.getElementById("checked[1]").value;
+        var isDriveThru = document.getElementById("checked[2]").value;
+        var isPickUp = document.getElementById("checked[3]").value;
+        var isDelivered = document.getElementById("checked[4]").value;
         var enteredPhone = document.getElementById("phone").value;
         var enteredWebsite = document.getElementById("website").value;
 
