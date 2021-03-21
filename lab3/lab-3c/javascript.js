@@ -158,7 +158,7 @@ function setData(e) {
         var isDineIn = document.getElementById("dinein").checked;
         var isDriveThru = document.getElementById("drivethru").checked;
         var isPickUp = document.getElementById("pickup").checked;
-        var isDelivered = document.getElementById("delivery").check;
+        var isDelivered = document.getElementById("delivery").checked;
         var enteredPhone = document.getElementById("phone").value;
         var enteredWebsite = document.getElementById("website").value;
 
