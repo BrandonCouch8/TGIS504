@@ -17,12 +17,12 @@ var sqlQuery = "SELECT * FROM lab_3c_brandon";
 function addPopup(feature, layer) {
     layer.bindPopup(
         "<b>" + feature.properties.name + "</b><br>" +
-        feature.properties.type + "<br>" +
+        "Type:" + feature.properties.type + "<br>" +
         feature.properties.description + "<br>" +
-        feature.properties.dinein + "<br>" +
-        feature.properties.drivethru + "<br>" +
-        feature.properties.pickup + "<br>" +
-        feature.properties.delivery + "<br>" +
+        "Dine-in: " + feature.properties.dinein + "<br>" +
+        "Drive-through: " + feature.properties.drivethru + "<br>" +
+        "Pick-up: " + feature.properties.pickup + "<br>" +
+        "Delivery: " + feature.properties.delivery + "<br>" +
         feature.properties.phone + "<br>" +
         feature.properties.website
     );
@@ -51,7 +51,7 @@ new L.Control.Draw({
 }).addTo(map);
 
 
-alert("This map is for submitting info on local restaurants in Tacoma.\nTo submit a place, use the tools on the left side of the map to add a point on the map.\nWhen you have placed a point, enter the relevant info in the pop-up that appears and click \"Submit.\"");
+alert("Support small, local businesses!\nThis map is for submitting info on local restaurants in Tacoma during the current pandemic.\nClick on a pin to see user submitted info on local restaurants, including dining options and contact info.\nTo submit a place, use the tools on the left side of the map to add a point on the map.\nWhen you have placed a point, enter the relevant info in the pop-up that appears and click \"Submit.\"");
 
 
 function createFormPopup() {
