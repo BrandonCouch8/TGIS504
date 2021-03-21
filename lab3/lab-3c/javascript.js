@@ -159,10 +159,10 @@ function setData(e) {
         var enteredName = document.getElementById("name").value;
         var enteredType = document.getElementById("type").value;
         var enteredDescription = document.getElementById("desc").value;
-        var isDineIn = document.getElementById("dinein").value;
-        var isDriveThru = document.getElementById("drivethru").value;
-        var isPickUp = document.getElementById("pickup").value;
-        var isDelivered = document.getElementById("delivery").value;
+        var isDineIn = document.getElementById("dinein");
+        var isDriveThru = document.getElementById("drivethru");
+        var isPickUp = document.getElementById("pickup");
+        var isDelivered = document.getElementById("delivery");
         var enteredPhone = document.getElementById("phone").value;
         var enteredWebsite = document.getElementById("website").value;
 
